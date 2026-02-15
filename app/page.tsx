@@ -9,7 +9,7 @@ export default function Home() {
 
       <main className="relative flex min-h-screen flex-col items-center justify-center px-6">
         {/* Stanford Tree */}
-        <div className="mb-8 text-8xl animate-spin">
+        <div className="mb-8 text-8xl spinning-tree">
           🌲
         </div>
 
