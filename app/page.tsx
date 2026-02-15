@@ -73,6 +73,26 @@ export default function Home() {
             Contact Us
           </a>
         </div>
+
+        {/* Spinning Trees */}
+        <div className="absolute top-10 left-10">
+          <div className="tree">
+            <div className="trunk"></div>
+            <div className="foliage"></div>
+          </div>
+        </div>
+        <div className="absolute top-20 right-20">
+          <div className="tree">
+            <div className="trunk"></div>
+            <div className="foliage"></div>
+          </div>
+        </div>
+        <div className="absolute bottom-20 left-20">
+          <div className="tree">
+            <div className="trunk"></div>
+            <div className="foliage"></div>
+          </div>
+        </div>
       </main>
     </div>
   );
