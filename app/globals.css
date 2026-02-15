@@ -23,6 +23,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 @keyframes spin {
@@ -38,4 +39,119 @@ body {
   animation: spin 20s linear infinite;
   transform-origin: center;
   font-size: 9rem;
+}
+
+/* Full-screen tree styles */
+.full-screen-tree {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  animation: spin 20s linear infinite;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Turbo styles */
+.turbo {
+  position: fixed;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(200px, 25vw, 300px);
+  height: auto;
+  animation: spin 10s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Rabbit spray animation */
+@keyframes spray {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.5) translate(var(--dx), var(--dy));
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1) translate(var(--dx2), var(--dy2));
+  }
+}
+
+.rabbit {
+  position: fixed;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Define custom properties for each rabbit */
+.rabbit-0 { --dx: 200px; --dy: -300px; --dx2: 400px; --dy2: -600px; animation: spray 4s ease-out 0s infinite; }
+.rabbit-1 { --dx: -150px; --dy: -350px; --dx2: -300px; --dy2: -700px; animation: spray 4s ease-out 0.2s infinite; }
+.rabbit-2 { --dx: 250px; --dy: -250px; --dx2: 500px; --dy2: -500px; animation: spray 4s ease-out 0.4s infinite; }
+.rabbit-3 { --dx: -200px; --dy: -200px; --dx2: -400px; --dy2: -400px; animation: spray 4s ease-out 0.6s infinite; }
+.rabbit-4 { --dx: 300px; --dy: -400px; --dx2: 600px; --dy2: -800px; animation: spray 4s ease-out 0.8s infinite; }
+.rabbit-5 { --dx: -250px; --dy: -300px; --dx2: -500px; --dy2: -600px; animation: spray 4s ease-out 1s infinite; }
+.rabbit-6 { --dx: 150px; --dy: -350px; --dx2: 300px; --dy2: -700px; animation: spray 4s ease-out 1.2s infinite; }
+.rabbit-7 { --dx: -300px; --dy: -250px; --dx2: -600px; --dy2: -500px; animation: spray 4s ease-out 1.4s infinite; }
+.rabbit-8 { --dx: 350px; --dy: -200px; --dx2: 700px; --dy2: -400px; animation: spray 4s ease-out 1.6s infinite; }
+.rabbit-9 { --dx: -350px; --dy: -150px; --dx2: -700px; --dy2: -300px; animation: spray 4s ease-out 1.8s infinite; }
+.rabbit-10 { --dx: 400px; --dy: -300px; --dx2: 800px; --dy2: -600px; animation: spray 4s ease-out 2s infinite; }
+.rabbit-11 { --dx: -400px; --dy: -350px; --dx2: -800px; --dy2: -700px; animation: spray 4s ease-out 2.2s infinite; }
+.rabbit-12 { --dx: 200px; --dy: -450px; --dx2: 400px; --dy2: -900px; animation: spray 4s ease-out 2.4s infinite; }
+.rabbit-13 { --dx: -150px; --dy: -500px; --dx2: -300px; --dy2: -1000px; animation: spray 4s ease-out 2.6s infinite; }
+.rabbit-14 { --dx: 250px; --dy: -400px; --dx2: 500px; --dy2: -800px; animation: spray 4s ease-out 2.8s infinite; }
+.rabbit-15 { --dx: -200px; --dy: -450px; --dx2: -400px; --dy2: -900px; animation: spray 4s ease-out 3s infinite; }
+.rabbit-16 { --dx: 300px; --dy: -350px; --dx2: 600px; --dy2: -700px; animation: spray 4s ease-out 3.2s infinite; }
+.rabbit-17 { --dx: -250px; --dy: -400px; --dx2: -500px; --dy2: -800px; animation: spray 4s ease-out 3.4s infinite; }
+.rabbit-18 { --dx: 150px; --dy: -500px; --dx2: 300px; --dy2: -1000px; animation: spray 4s ease-out 3.6s infinite; }
+.rabbit-19 { --dx: -300px; --dy: -450px; --dx2: -600px; --dy2: -900px; animation: spray 4s ease-out 3.8s infinite; }
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .turbo {
+    width: clamp(150px, 30vw, 250px);
+  }
+  .rabbit {
+    width: 40px;
+  }
+  .rabbit-0 { --dx: 150px; --dy: -200px; --dx2: 300px; --dy2: -400px; }
+  .rabbit-1 { --dx: -120px; --dy: -250px; --dx2: -240px; --dy2: -500px; }
+  .rabbit-2 { --dx: 200px; --dy: -180px; --dx2: 400px; --dy2: -360px; }
+  .rabbit-3 { --dx: -180px; --dy: -150px; --dx2: -360px; --dy2: -300px; }
+  .rabbit-4 { --dx: 250px; --dy: -300px; --dx2: 500px; --dy2: -600px; }
+  .rabbit-5 { --dx: -200px; --dy: -220px; --dx2: -400px; --dy2: -440px; }
+  .rabbit-6 { --dx: 120px; --dy: -280px; --dx2: 240px; --dy2: -560px; }
+  .rabbit-7 { --dx: -250px; --dy: -200px; --dx2: -500px; --dy2: -400px; }
+  .rabbit-8 { --dx: 280px; --dy: -150px; --dx2: 560px; --dy2: -300px; }
+  .rabbit-9 { --dx: -280px; --dy: -120px; --dx2: -560px; --dy2: -240px; }
+  .rabbit-10 { --dx: 300px; --dy: -250px; --dx2: 600px; --dy2: -500px; }
+  .rabbit-11 { --dx: -300px; --dy: -280px; --dx2: -600px; --dy2: -560px; }
+  .rabbit-12 { --dx: 160px; --dy: -350px; --dx2: 320px; --dy2: -700px; }
+  .rabbit-13 { --dx: -130px; --dy: -380px; --dx2: -260px; --dy2: -760px; }
+  .rabbit-14 { --dx: 220px; --dy: -320px; --dx2: 440px; --dy2: -640px; }
+  .rabbit-15 { --dx: -170px; --dy: -350px; --dx2: -340px; --dy2: -700px; }
+  .rabbit-16 { --dx: 240px; --dy: -280px; --dx2: 480px; --dy2: -560px; }
+  .rabbit-17 { --dx: -210px; --dy: -320px; --dx2: -420px; --dy2: -640px; }
+  .rabbit-18 { --dx: 130px; --dy: -380px; --dx2: 260px; --dy2: -760px; }
+  .rabbit-19 { --dx: -240px; --dy: -350px; --dx2: -480px; --dy2: -700px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .full-screen-tree,
+  .turbo,
+  .rabbit {
+    animation: none;
+  }
 }
