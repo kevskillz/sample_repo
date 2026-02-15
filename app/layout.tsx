@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "TreeHacks - Stanford's Premier Hackathon",
   description: "Join thousands of hackers at Stanford's annual hackathon. Build, innovate, and connect.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
