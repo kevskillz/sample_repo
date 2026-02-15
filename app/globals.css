@@ -39,3 +39,29 @@ body {
   transform-origin: center;
   font-size: 9rem;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: var(--background);
+  border-bottom: 1px solid var(--foreground);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  max-width: 100%;
+}
+
+.logo:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
+  }
+}

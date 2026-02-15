@@ -27,6 +27,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="header">
+          <img src="/treehacks-logo.svg" alt="TreeHacks Logo" className="logo" />
+        </header>
         {children}
       </body>
     </html>
