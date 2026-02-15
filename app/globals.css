@@ -37,4 +37,5 @@ body {
 .spinning-tree {
   animation: spin 20s linear infinite;
   transform-origin: center;
+  font-size: 9rem;
 }
