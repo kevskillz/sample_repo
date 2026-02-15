@@ -25,6 +25,11 @@ export default function Home() {
           </p>
         </div>
 
+        {/* Big Red Button */}
+        <div className="mb-16">
+          <button className="big-red-button">hello</button>
+        </div>
+
         {/* Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-4xl">
           <div className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-lg p-6 hover:border-red-500/50 transition">
