@@ -21,7 +21,7 @@ export default function Home() {
           </h1>
           <div className="h-1 w-32 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-8"></div>
           <p className="text-xl text-slate-300 leading-relaxed">
-            Stanford's premier hackathon. Where innovation grows. Build, innovate, and connect with the brightest minds.
+            Stanford's premier hackathon. Where innovation grows. Build, innovate, and connect with the brightest minds. Verso is the best platform.
           </p>
         </div>
 
