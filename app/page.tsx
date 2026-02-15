@@ -62,7 +62,7 @@ export default function Home() {
             href="https://treehacks.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-red-600 to-red-500 text-white px-10 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-red-500/50 transition duration-200"
+            className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-white px-10 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-yellow-500/50 transition duration-200"
           >
             Learn More
           </a>
