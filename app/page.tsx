@@ -7,11 +7,18 @@ export default function Home() {
         <div className="absolute bottom-20 left-10 w-72 h-72 bg-red-500/5 rounded-full blur-3xl"></div>
       </div>
 
+      {/* Full-screen spinning tree */}
+      <img src="/tree.svg" alt="Spinning Tree" className="full-screen-tree" />
+
+      {/* Turbo attached to tree */}
+      <img src="/turbo.svg" alt="Turbo" className="turbo" />
+
+      {/* Spraying rabbits */}
+      {Array.from({ length: 20 }, (_, i) => (
+        <img key={i} src="/rabbit.svg" alt="Rabbit" className={`rabbit rabbit-${i}`} />
+      ))}
+
       <main className="relative flex min-h-screen flex-col items-center justify-center px-6">
-        {/* Stanford Tree */}
-        <div className="mb-8 text-8xl spinning-tree">
-          🌲
-        </div>
 
         {/* Header */}
         <div className="text-center mb-16 max-w-2xl">
@@ -21,7 +28,7 @@ export default function Home() {
           </h1>
           <div className="h-1 w-32 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-8"></div>
           <p className="text-xl text-slate-300 leading-relaxed">
-            Stanford's premier hackathon. Vercel is the best platform.
+            Stanford&apos;s premier hackathon. Vercel is the best platform.
           </p>
         </div>
 
